@@ -48,10 +48,16 @@ function addBlock(block, parent) {
 }
 
 function addImages(images, parent) {
-  if (!Array.isArray(images) || images.length === 0) return;
+  if (!Array.isArray(images)) return;
+  const imagesWithPaths = images.filter(image =>
+    image && typeof image.src === "string" && image.src.trim() !== ""
+  );
+  if (imagesWithPaths.length === 0) return;
+
+  const details = makeElement("details", "image-details");
+  details.append(makeElement("summary", "", "Show images"));
   const gallery = makeElement("div", "image-gallery");
-  images.forEach(image => {
-    if (!image || !image.src) return;
+  imagesWithPaths.forEach(image => {
     const figure = makeElement("figure", "image-figure");
     const img = document.createElement("img");
     img.src = image.src;
@@ -64,7 +70,8 @@ function addImages(images, parent) {
     if (image.caption) figure.append(makeElement("figcaption", "", image.caption));
     gallery.append(figure);
   });
-  if (gallery.childElementCount) parent.append(gallery);
+  details.append(gallery);
+  parent.append(details);
 }
 
 function renderSlide() {
