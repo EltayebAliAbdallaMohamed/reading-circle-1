@@ -1,0 +1,158 @@
+{
+  "title": "Reading Circle",
+  "sessionLabel": "King Saud University · English Teachers",
+  "slides": [
+    {
+      "section": "Reading circle · Session guide",
+      "title": "Bridging Barriers",
+      "subtitle": "Aural cues, codeswitching, and vocabulary learning for visually impaired learners",
+      "articleDetails": {
+        "authors": "Areen Badri, Suzanne Graham & Pengchong Zhang",
+        "publication": "Studies in Second Language Acquisition (2026), 48, 118–139",
+        "context": "Cambridge University Press · DOI: 10.1017/S0272263125101101"
+      },
+      "blocks": [
+        { "type": "callout", "text": "Today’s purpose: examine the article’s evidence, question its implications, and connect the findings to our English-teaching context." }
+      ],
+      "images": [
+        {
+            "src": "images/ssml_1.png",
+            "alt": "Screenshot of the vocabulary activity",
+            "caption": "Vocabulary activity used in the discussion"
+        },
+        {
+            "src": "images/ssml_2.png",
+            "alt": "Screenshot of the vocabulary activity",
+            "caption": "Vocabulary activity used in the discussion"
+        }
+    ],
+      "notes": "Welcome the group. Remind participants that everyone has read the article and that the meeting is a conversation, not a lecture."
+    },
+    {
+      "section": "01 · Opening conversation",
+      "title": "Start with your reading",
+      "subtitle": "Before revisiting the study, surface the ideas participants brought with them.",
+      "blocks": [
+        { "type": "questions", "items": [
+          "Which claim, result, or example stayed with you after reading?",
+          "What did you find convincing, surprising, or difficult to interpret?",
+          "What question did you bring to this discussion?"
+        ] },
+        { "type": "callout", "text": "Facilitation move: invite a brief round-robin, then group similar responses without evaluating them yet." }
+      ],
+      "images": [],
+      "notes": "Allow a few seconds of quiet thinking before inviting responses. Make space for different interpretations and ask participants to refer to the article."
+    },
+    {
+      "section": "02 · The study in brief",
+      "title": "What problem does the article address?",
+      "blocks": [
+        { "type": "cards", "items": [
+          { "title": "A teaching challenge", "text": "Language lessons can rely heavily on visual material, creating barriers for learners with visual impairment (VI)." },
+          { "title": "A research gap", "text": "The authors identify a shortage of rigorous classroom research on effective foreign-language teaching for VI learners." },
+          { "title": "The central question", "text": "Can making spoken target words more noticeable, alongside an L1 explanation, improve L2 vocabulary learning?" }
+        ] },
+        { "type": "callout", "text": "Clarify the distinction between an accessible route to input and a learner’s level of language proficiency." }
+      ],
+      "images": [],
+      "notes": "Ask participants how the research problem is framed and whose perspectives or classroom experiences are most visible in that framing."
+    },
+    {
+      "section": "03 · Key concepts",
+      "title": "What did the researchers compare?",
+      "blocks": [
+        { "type": "cards", "items": [
+          { "title": "CS · Codeswitching", "text": "The teacher explains an English target word using the learners’ first language (Arabic) within an otherwise English lesson." },
+          { "title": "AIM · Aural Input Manipulation", "text": "Spoken input is manipulated to make selected language features more noticeable. Here, target words were made louder." },
+          { "title": "AIMCS", "text": "The target English word is made louder and is then explained in Arabic." }
+        ] },
+        { "type": "callout", "text": "The experiment compared AIMCS with CS. It did not test AIM alone or include a no-treatment control group." }
+      ],
+      "images": [],
+      "notes": "Check that the group distinguishes the broad idea of aural input manipulation from the specific increased-volume technique used in this experiment."
+    },
+    {
+      "section": "04 · Method and evidence",
+      "title": "How was the study conducted?",
+      "blocks": [
+        { "type": "list", "items": [
+          "32 Saudi female high-school EFL learners: 16 visually impaired and 16 sighted participants; Arabic was their first language.",
+          "Participants were low-intermediate learners, aged 16–20, with six years of English schooling.",
+          "Across six 50-minute sessions, each learner experienced both CS and AIMCS conditions with counterbalanced target words.",
+          "Learning was measured through immediate and two-week delayed vocabulary meaning-recognition tests."
+        ] },
+        { "type": "callout", "text": "Evidence check: Which design choices strengthen the comparison, and which features limit how widely we can generalize the results?" }
+      ],
+      "images": [],
+      "notes": "Emphasize that the participants were school learners, not university students. Invite the group to comment on sample size, setting, measures, and the absence of an AIM-only condition."
+    },
+    {
+      "section": "05 · Findings",
+      "title": "What did the results show?",
+      "blocks": [
+        { "type": "cards", "items": [
+          { "title": "Short-term learning", "text": "AIMCS produced significantly better short-term vocabulary learning than CS for both VI and sighted learners." },
+          { "title": "Delayed learning", "text": "The AIMCS advantage over CS was not maintained at the two-week delayed post-test." },
+          { "title": "Learner differences", "text": "VI learners benefited more overall in the short term; listening proficiency was especially relevant to VI learners’ gains." },
+          { "title": "Existing vocabulary", "text": "Learners with lower pre-existing vocabulary knowledge made greater gains, regardless of group or condition." }
+        ] },
+        { "type": "callout", "text": "Interpretation check: the results support a short-term advantage in this study—not a claim that AIMCS improves long-term retention." }
+      ],
+      "images": [],
+      "notes": "Ask participants to distinguish the reported findings from the authors’ explanations for those findings. If needed, revisit the article’s results tables."
+    },
+    {
+      "section": "06 · Critical discussion",
+      "title": "How strong is the argument?",
+      "blocks": [
+        { "type": "questions", "items": [
+          "How well do the measures capture vocabulary knowledge and retention?",
+          "What can—and can’t—we conclude when AIMCS is compared with CS but not with AIM alone or a no-treatment group?",
+          "Are the authors’ explanations (noticing, L1 mediation, sensory compensation) demonstrated by the results or offered as interpretations?",
+          "Which limitations most affect the study’s conclusions or relevance to other learners?"
+        ] },
+        { "type": "callout", "text": "Facilitation move: ask ‘What in the article makes you say that?’ and invite a different reading before moving on." }
+      ],
+      "images": [],
+      "notes": "Encourage evidence-based critique rather than a simple vote for or against the article. Give participants time to locate supporting passages."
+    },
+    {
+      "section": "07 · Application",
+      "title": "What might this mean for our classrooms?",
+      "blocks": [
+        { "type": "questions", "items": [
+          "How do we currently make important vocabulary noticeable in listening activities?",
+          "When might an Arabic explanation support learning, and when might it be less useful?",
+          "How can we create repeated, meaningful and productive encounters that support longer-term retention?",
+          "How could these ideas be adapted inclusively for visually impaired university learners?"
+        ] },
+        { "type": "callout", "text": "The study involved low-intermediate Saudi high-school learners. Treat university-level applications as informed possibilities, not tested outcomes." }
+      ],
+      "images": [],
+      "notes": "Invite participants to offer one practical adaptation and identify what evidence or learner feedback they would want before adopting it."
+    },
+    {
+      "section": "08 · Screenshots and materials",
+      "title": "Look closely at an example",
+      "subtitle": "Use this slide to examine screenshots, application interfaces, study materials, or participant-created examples.",
+      "blocks": [
+        { "type": "paragraph", "text": "Add images to this slide’s images array in data.json. Use a relative file path (for example, images/activity-screen.png), meaningful alt text, and an optional caption." }
+      ],
+      "images": [],
+      "notes": "Replace the instructional text with a prompt for the image(s) you add. Describe important visual information aloud so the discussion remains accessible."
+    },
+    {
+      "section": "09 · Closing reflection",
+      "title": "One insight, one next step",
+      "blocks": [
+        { "type": "questions", "items": [
+          "What is one idea from the article you will continue thinking about?",
+          "What is one question or classroom practice you would like to explore further?"
+        ] },
+        { "type": "callout", "text": "Take-away: the article offers evidence for an aural, inclusive approach to short-term vocabulary learning, while highlighting the need to plan for retention and further research." }
+      ],
+      "images": [],
+      "notes": "Close by asking participants for a concise takeaway. Thank them, and note any questions or follow-up actions for the next reading circle."
+    }
+  ]
+}
