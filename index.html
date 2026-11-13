@@ -1,376 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bridging Barriers — Research Presentation</title>
-<style>
-:root{
-  --bg:#101827;--panel:#182438;--panel2:#213149;--ink:#f4f7fb;--muted:#bdc9d8;
-  --accent:#7dd3c7;--accent2:#f4c66a;--line:#40516a;--good:#a8dfb2;
-}
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;background:var(--bg);color:var(--ink);
- font-family:Arial,Helvetica,sans-serif}
-body{overflow:hidden}
-#deck{height:100%;display:flex;flex-direction:column}
-header{height:54px;display:flex;align-items:center;justify-content:space-between;
- padding:0 22px;border-bottom:1px solid var(--line);color:var(--muted);font-size:14px}
-header strong{color:var(--ink);letter-spacing:.02em}
-#stage{flex:1;display:flex;align-items:center;justify-content:center;padding:24px;min-height:0}
-.slide{display:none;width:min(1120px,100%);height:min(690px,100%);overflow:auto;
- background:linear-gradient(145deg,var(--panel),#142033);border:1px solid var(--line);
- border-radius:20px;padding:clamp(24px,4vw,58px);box-shadow:0 18px 60px #0005}
-.slide.active{display:block}
-.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.13em;font-size:13px;font-weight:bold;margin-bottom:16px}
-h1{font-size:clamp(36px,5vw,62px);line-height:1.06;margin:0 0 22px}
-h2{font-size:clamp(30px,4vw,44px);line-height:1.12;margin:0 0 24px}
-h3{font-size:21px;margin:0 0 10px;color:var(--accent)}
-p,li{font-size:clamp(17px,1.8vw,21px);line-height:1.48;color:var(--muted)}
-p strong,li strong{color:var(--ink)}
-ul{padding-left:1.2em;margin-top:10px}
-li{margin:9px 0}
-.subtitle{font-size:clamp(20px,2.2vw,27px);max-width:850px}
-.meta{font-size:16px;color:var(--muted);line-height:1.7;margin-top:28px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
-.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:19px}
-.card p{font-size:17px;margin:7px 0 0}
-.big{font-size:clamp(34px,5vw,58px);font-weight:bold;color:var(--accent);line-height:1.05}
-.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 12px;
- color:var(--accent2);font-size:14px;margin:4px 5px 4px 0}
-.callout{border-left:5px solid var(--accent);background:#213149;padding:16px 20px;
- border-radius:8px;margin:18px 0}
-.callout p{margin:0}
-.flow{display:flex;align-items:stretch;gap:12px;margin:24px 0}
-.flow .step{flex:1;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
-.arrow{align-self:center;color:var(--accent2);font-size:28px}
-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:17px}
-th,td{border:1px solid var(--line);padding:13px;text-align:left;vertical-align:top}
-th{background:#263750;color:var(--accent)}
-td{color:var(--muted)}
-.note{display:none;margin-top:22px;padding:17px 20px;border:1px dashed var(--accent2);
- border-radius:12px;background:#302d24}
-.note.show{display:block}
-.note h3{color:var(--accent2);font-size:16px}
-.note p{font-size:16px;margin:8px 0}
-footer{height:70px;display:flex;align-items:center;gap:14px;padding:0 20px;
- border-top:1px solid var(--line)}
-button{background:var(--panel2);color:var(--ink);border:1px solid var(--line);
- border-radius:10px;padding:11px 17px;font-size:16px;cursor:pointer}
-button:hover,button:focus{outline:3px solid var(--accent);outline-offset:2px}
-button.primary{background:var(--accent);color:#10202b;border-color:var(--accent);font-weight:bold}
-button:disabled{opacity:.35;cursor:not-allowed}
-#counter{color:var(--muted);min-width:88px;text-align:center;font-variant-numeric:tabular-nums}
-#progress{height:5px;background:#28364a;flex:1;border-radius:9px;overflow:hidden}
-#bar{height:100%;width:0;background:var(--accent);transition:width .2s}
-.small{font-size:14px;color:var(--muted)}
-.refs{font-size:14px;line-height:1.5;overflow-wrap:anywhere}
-@media(max-width:700px){
- #stage{padding:10px}.slide{padding:22px;border-radius:12px}
- .grid,.grid.three{grid-template-columns:1fr}.flow{flex-direction:column}
- .arrow{transform:rotate(90deg);align-self:center}
- header{padding:0 12px}footer{padding:0 9px;gap:7px}
- button{padding:10px 11px;font-size:14px}
-}
-@media print{
- body{overflow:visible;background:white;color:black}
- #deck{height:auto}header,footer{display:none}#stage{display:block;padding:0}
- .slide{display:block!important;width:100%;height:auto;min-height:95vh;overflow:visible;
-  page-break-after:always;background:white;color:black;border:0;box-shadow:none}
- .slide p,.slide li,.meta,.small,.refs{color:#222}
- .card,.callout{background:#f1f4f7;color:black}
- .note{display:block!important;background:#fff8e6}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173b35">
+  <meta name="description" content="A reusable, slide-based reading circle discussion guide for English teachers.">
+  <title>Reading Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<div id="deck">
-<header><strong>BRIDGING BARRIERS</strong><span>30-minute research presentation · University English teachers</span></header>
-<main id="stage" aria-live="polite">
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Reading Circle home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>READING <span class="brand-light">CIRCLE</span></span>
+      </a>
+      <div class="session-label" id="session-label">Discussion session</div>
+      <button class="icon-button" id="fullscreen-button" type="button" title="Toggle fullscreen" aria-label="Toggle fullscreen">⛶</button>
+    </header>
 
-<section class="slide active" data-title="Opening">
-<div class="kicker">Research presentation · 30 minutes</div>
-<h1>Bridging Barriers</h1>
-<p class="subtitle">Aural cues, codeswitching, and proficiency in vocabulary learning for visually impaired learners</p>
-<div class="meta">
-<strong>Areen Badri, Suzanne Graham and Pengchong Zhang</strong><br>
-Studies in Second Language Acquisition (2026), 48, 118–139<br>
-Cambridge University Press · DOI: 10.1017/S0272263125101101
-</div>
-<div class="callout"><p><strong>Central question:</strong> Can making target words more noticeable in spoken input, while explaining them in learners’ first language, improve L2 vocabulary learning?</p></div>
-<div class="note"><h3>Speaker notes · 1 minute</h3><p>Introduce the article and explain that the presentation focuses on what the researchers investigated, how they investigated it, what they found, and what university English teachers might take from it. The participants were Saudi female high-school EFL learners, not university students. The audience for this presentation is university English teachers.</p></div>
-</section>
+    <main id="presentation" aria-live="polite" aria-atomic="true">
+      <div class="loading-state" id="loading-state">Preparing your discussion…</div>
+      <div class="error-state" id="error-state" hidden>
+        <h1>We couldn't load the session</h1>
+        <p>Check that <code>data.json</code> is next to this page, then open the project through a local web server.</p>
+      </div>
+      <section class="slide" id="slide" aria-label="Presentation slide" hidden>
+        <div class="slide-content" id="slide-content"></div>
+      </section>
+    </main>
 
-<section class="slide" data-title="Why this study matters">
-<div class="kicker">01 · Rationale</div><h2>Why investigate vocabulary learning for VI learners?</h2>
-<div class="grid">
- <div class="card"><div class="big">2.2bn</div><p>People globally were estimated to have some degree of visual impairment (WHO, 2019, as cited in the article).</p></div>
- <div class="card"><h3>Research gap</h3><p>The authors identify a shortage of rigorous class-level empirical research on effective foreign-language teaching approaches for VI learners.</p></div>
- <div class="card"><h3>Access to input</h3><p>Language lessons often rely heavily on visually presented material, which can create barriers in inclusive classrooms.</p></div>
- <div class="card"><h3>Not simply an advantage</h3><p>Listening may be a primary information channel, but possible challenges in concept formation and L1–L2 mapping also matter.</p></div>
-</div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>The article argues that VI learners need strong vocabulary knowledge just as sighted learners do, but there has been limited evidence about which instructional approaches work for them. Avoid assuming that stronger auditory abilities automatically mean strong L2 listening proficiency. The article treats VI learners as a diverse group and notes that the nature and extent of concept-formation difficulties remain debated.</p></div>
-</section>
-
-<section class="slide" data-title="Theoretical foundations">
-<div class="kicker">02 · Theoretical foundations</div><h2>Three ideas behind the intervention</h2>
-<div class="grid three">
- <div class="card"><h3>Noticing</h3><p>Schmidt (2012): consciously noticed input can become intake. Learners need to attend to target forms, not only overall meaning.</p></div>
- <div class="card"><h3>Input enhancement</h3><p>Sharwood Smith (1993): input is manipulated to make selected linguistic features more noticeable.</p></div>
- <div class="card"><h3>L1 lemma mediation</h3><p>Jiang (2000): an L2 word may connect to a conceptual representation through its L1 equivalent during vocabulary development.</p></div>
-</div>
-<div class="callout"><p><strong>Teaching logic:</strong> make the spoken English word salient, then support its meaning through an L1 explanation within contextualized L2 input.</p></div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Briefly explain the three-stage model from Jiang: the formal stage, the L1 lemma mediation stage, and the L2 integration stage. The article suggests that L1 explanations may help connect an L2 word to an existing conceptual representation. It also cautions that learners need contextualized L2 input; otherwise they may become over-reliant on translation and fail to develop fuller word knowledge. This intervention is an example of lexical focus-on-form: attention is drawn to a linguistic item within a meaning-focused activity.</p></div>
-</section>
-
-<section class="slide" data-title="Key terminology">
-<div class="kicker">03 · Key terminology</div><h2>What exactly are CS, AIM and AIMCS?</h2>
-<table>
-<tr><th>Term</th><th>Meaning in this study</th><th>What the teacher does</th></tr>
-<tr><td><strong>CS</strong><br>Codeswitching</td><td>Use of the learners’ L1 alongside L2 input.</td><td>Explains the target English word in Arabic.</td></tr>
-<tr><td><strong>AIM</strong><br>Aural Input Manipulation</td><td>Manipulation of spoken input, e.g. volume, pitch, speed or pausing.</td><td>Makes a selected spoken item more prominent.</td></tr>
-<tr><td><strong>AIMCS</strong></td><td>AIM combined with codeswitching.</td><td>Increases the volume of the target English word, then explains it in Arabic.</td></tr>
-</table>
-<div class="callout"><p>In this experiment, the AIM manipulation specifically involved <strong>increased volume</strong> of target items, followed by CS explanations.</p></div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Be precise: AIM is the broader term, but the tested manipulation in this study was increased volume. Do not imply that the researchers tested every possible AIM technique. CS alone was the comparison condition; AIM alone was not tested.</p></div>
-</section>
-
-<section class="slide" data-title="Research questions">
-<div class="kicker">04 · Research questions</div><h2>What did the researchers want to find out?</h2>
-<div class="card">
-<h3>RQ1 · Instructional effect</h3>
-<p>What is the effect of two types of vocabulary instruction (CS and AIMCS—artificially increasing the volume followed by CS) during aural activities on (a) VI and (b) SI learners?</p>
-</div>
-<div class="card" style="margin-top:14px">
-<h3>RQ2 · Proficiency moderation</h3>
-<p>How is the instruction effect on vocabulary learning moderated by learners’ listening proficiency and their existing vocabulary size?</p>
-</div>
-<div class="note"><h3>Speaker notes · 1.5 minutes</h3><p>Explain that the researchers were not simply asking whether one technique works. They also examined whether outcomes differed for visually impaired and sighted learners, and whether listening proficiency or pre-existing vocabulary knowledge changed the effects. Their design compared CS with AIMCS to identify the added value of AIM over CS.</p></div>
-</section>
-
-<section class="slide" data-title="Participants">
-<div class="kicker">05 · Methodology</div><h2>Who took part?</h2>
-<div class="grid three">
- <div class="card"><div class="big">32</div><p>Total participants</p></div>
- <div class="card"><div class="big">16 + 16</div><p>16 VI and 16 sighted (SI) learners</p></div>
- <div class="card"><div class="big">16–20</div><p>Age range in years</p></div>
-</div>
-<ul>
-<li>Saudi female high-school EFL learners; Arabic was their L1.</li>
-<li>Six years of English schooling; low–intermediate proficiency (IELTS 4.5–5).</li>
-<li>Convenience sampling: VI learners recruited from an institute for blind people and a high school with a dedicated VI class; SI learners from the same high school.</li>
-</ul>
-<div class="note"><h3>Speaker notes · 1.5 minutes</h3><p>Emphasize the sample carefully. It consisted of 32 Saudi female high-school learners, not university students. Recruitment of participants with disabilities can be challenging, which is why the researchers used convenience sampling. The small, context-specific sample is relevant when considering how widely to generalize the findings.</p></div>
-</section>
-
-<section class="slide" data-title="Study design">
-<div class="kicker">06 · Study design</div><h2>A counterbalanced mixed design</h2>
-<div class="flow">
- <div class="step"><h3>Baseline</h3><p>Listening comprehension and vocabulary knowledge tests</p></div>
- <div class="arrow">→</div>
- <div class="step"><h3>6 sessions</h3><p>50 minutes each, across two academic terms</p></div>
- <div class="arrow">→</div>
- <div class="step"><h3>Post-test</h3><p>At the end of each session</p></div>
- <div class="arrow">→</div>
- <div class="step"><h3>2 weeks later</h3><p>Delayed post-test</p></div>
-</div>
-<div class="callout"><p><strong>Counterbalancing:</strong> within each session, five target items received AIMCS and five received CS; the order was reversed in the next session, and so on.</p></div>
-<p>The design yielded 5,400 valid observations across 60 taught target items.</p>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>The study was quasi-experimental and used both within- and between-subjects comparisons. Each learner encountered both instructional conditions. The order was counterbalanced to reduce the possibility that one method benefited simply from appearing earlier or later. Six sessions were delivered by the first author. A post-test followed each session, with a delayed post-test two weeks later.</p></div>
-</section>
-
-<section class="slide" data-title="Teaching procedure">
-<div class="kicker">07 · Teaching procedure</div><h2>What happened in a 50-minute session?</h2>
-<ol>
-<li><strong>Prepare for meaning:</strong> learners received multiple-choice listening comprehension questions.</li>
-<li><strong>First listening:</strong> they heard the passage once, answered questions and discussed its meaning in L2.</li>
-<li><strong>Segmented replay:</strong> the passage was replayed in segments; the teacher paused at sentence ends to explain target vocabulary.</li>
-<li><strong>Instructional condition:</strong> CS or AIMCS was applied to the target item; an additional example was provided.</li>
-<li><strong>Revisit meaning:</strong> the teacher reviewed the passage meaning in L2, repeated target explanations, and played the recording a third time.</li>
-</ol>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Explain that learners first focused on the overall meaning rather than being alerted to unfamiliar words. In the segmented replay, explanations were matched for length and delivery time across conditions. Both groups could access written target words: PowerPoint slides for SI learners and an Immersive Reader-enabled Word document for VI learners. The listening comprehension question sheet was also made accessible using Microsoft Forms and Immersive Reader.</p></div>
-</section>
-
-<section class="slide" data-title="Materials and measures">
-<div class="kicker">08 · Materials and measures</div><h2>What was taught and how was learning measured?</h2>
-<div class="grid">
- <div class="card"><h3>60 target items</h3><p>31 nouns, 18 adjectives and 11 verbs, selected from modified listening passages and judged unlikely to be known.</p></div>
- <div class="card"><h3>Listening passages</h3><p>Selected from British Council and Unlock 3 materials, then modified for topic, complexity, speech rate and length.</p></div>
- <div class="card"><h3>Pre-existing vocabulary</h3><p>Listening Vocabulary Levels Test (LVLT), adapted for Arabic L1 speakers; target items were embedded to reduce pre-treatment alerting.</p></div>
- <div class="card"><h3>Learning tests</h3><p>Six post-tests and six delayed post-tests; meaning-recognition format, with scores out of 60.</p></div>
-</div>
-<p class="small">The listening comprehension pre-test used the first two sections of an IELTS practice test (20 items).</p>
-<div class="note"><h3>Speaker notes · 1.5 minutes</h3><p>The vocabulary items came from K2, K3 and K4 frequency bands, the Academic Word List and off-list words. The LVLT was used to assess general vocabulary knowledge and pre-existing knowledge of target items. The delayed post-test took place two weeks after each session. The article reports high internal consistency for the listening test, LVLT, post-tests and delayed post-tests.</p></div>
-</section>
-
-<section class="slide" data-title="The two conditions">
-<div class="kicker">09 · Comparing the conditions</div><h2>Same contextualized passage; different word treatment</h2>
-<div class="grid">
- <div class="card">
- <h3>CS condition</h3>
- <p>Target word occurs in the listening passage.</p>
- <p><strong>Teacher:</strong> explains the target word using Arabic (L1), within the otherwise L2 lesson.</p>
- <span class="tag">L2 context + L1 explanation</span>
- </div>
- <div class="card">
- <h3>AIMCS condition</h3>
- <p>Target word occurs in the listening passage with increased volume.</p>
- <p><strong>Teacher:</strong> emphasizes the target word through volume, then explains it using Arabic (L1).</p>
- <span class="tag">Enhanced aural cue + L1 explanation</span>
- </div>
-</div>
-<div class="callout"><p><strong>Important design point:</strong> the study compared AIMCS with CS. It did not include an AIM-only condition or a no-treatment control group.</p></div>
-<div class="note"><h3>Speaker notes · 1.5 minutes</h3><p>Use a simple illustrative example, clearly label it as your own example rather than one from the article: “The word is enormous” spoken with greater volume, followed by an Arabic explanation such as “ضخم جداً”. The researchers also provided an additional example of the target item. Their explanations were controlled to be identical in length and time taken in both conditions.</p></div>
-</section>
-
-<section class="slide" data-title="Main findings">
-<div class="kicker">10 · Results · RQ1</div><h2>What did the study find?</h2>
-<div class="grid">
- <div class="card"><div class="big">Short term</div><h3>AIMCS advantage</h3><p>AIMCS produced significantly better short-term vocabulary learning than CS for both VI and SI learners.</p></div>
- <div class="card"><div class="big">2 weeks</div><h3>No clear condition advantage</h3><p>The superiority of AIMCS over CS was not maintained at the delayed post-test.</p></div>
- <div class="card"><h3>Group effect</h3><p>VI learners benefited more overall than SI learners in the short term.</p></div>
- <div class="card"><h3>Delayed outcome</h3><p>The short-term VI advantage over SI learners disappeared at the delayed post-test.</p></div>
-</div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>This is the central result. Do not say AIMCS produced better long-term retention: the advantage over CS disappeared at the two-week delayed post-test. Likewise, VI learners’ greater overall benefit was a short-term effect and was not sustained as a group advantage at delay. The paper reports statistical comparisons; this slide summarizes the direction of the findings rather than inventing effect sizes.</p></div>
-</section>
-
-<section class="slide" data-title="Proficiency effects">
-<div class="kicker">11 · Results · RQ2</div><h2>Proficiency mattered</h2>
-<div class="grid">
- <div class="card">
- <h3>Listening proficiency</h3>
- <p>For short-term learning, higher listening proficiency was associated with greater gains from AIMCS than from CS.</p>
- </div>
- <div class="card">
- <h3>VI and listening</h3>
- <p>Listening proficiency had larger positive moderation effects for VI learners than for SI learners, in both short- and longer-term analyses.</p>
- </div>
- <div class="card">
- <h3>Existing vocabulary</h3>
- <p>Learners with lower pre-existing vocabulary knowledge made greater gains, regardless of group or instructional condition.</p>
- </div>
- <div class="card">
- <h3>Longer-term pattern</h3>
- <p>For longer-term learning, learners with different listening proficiency levels appeared to benefit similarly from CS and AIMCS.</p>
- </div>
-</div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Explain “moderation” in accessible terms: the effect of an instructional method was not the same for all learners; it varied with proficiency. Higher listening proficiency especially strengthened the short-term benefit of AIMCS. Lower pre-existing vocabulary was associated with larger gains across both groups and both conditions. This does not mean that low listening proficiency makes listening instruction unsuitable; it means listening proficiency is an important factor to consider and develop.</p></div>
-</section>
-
-<section class="slide" data-title="Interpreting the findings">
-<div class="kicker">12 · Discussion</div><h2>How do the authors interpret the results?</h2>
-<ul>
-<li><strong>Noticing:</strong> increased volume may have made target words more salient and directed attention to their form.</li>
-<li><strong>L1 mediation:</strong> CS may have helped connect the L2 word with its corresponding concept through the L1.</li>
-<li><strong>Sensory compensation:</strong> auditory strengths may help explain why VI learners responded particularly well to aural instruction in the short term.</li>
-<li><strong>Depth of processing:</strong> drawing attention to a word and giving an L1 explanation may not, by themselves, create the elaborative processing needed for durable retention.</li>
-</ul>
-<div class="callout"><p>The authors suggest further contextualized encounters and interactive, productive use of target words may support longer-term retention.</p></div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Present these as the authors’ interpretations, not as mechanisms directly proven by the experiment. The authors connect the short-term benefit to Schmidt’s Noticing Hypothesis and VanPatten’s input processing account. They interpret CS through Jiang’s L1 lemma mediation stage. Sensory compensation is offered as a possible explanation for VI learners’ stronger short-term response to auditory input. The article does not establish that all VI learners have superior listening proficiency.</p></div>
-</section>
-
-<section class="slide" data-title="Limitations">
-<div class="kicker">13 · Limitations and future research</div><h2>What remains unanswered?</h2>
-<ul>
-<li><strong>No AIM-only condition:</strong> the study cannot isolate the contribution of AIM from the contribution of CS.</li>
-<li><strong>No traditional-instruction comparison:</strong> future work should compare AIMCS with more conventional L2 teaching, including approaches relying heavily on visual input.</li>
-<li><strong>Listening comprehension of passages:</strong> the researchers did not assess how well both groups understood the listening passages used during instruction.</li>
-<li><strong>Further research:</strong> larger samples of VI learners and interventions to develop L2 listening proficiency are needed.</li>
-</ul>
-<div class="note"><h3>Speaker notes · 1.5 minutes</h3><p>These limitations matter when applying the findings. Because AIM alone was not tested, the researchers cannot say whether the increased volume, the L1 explanation, or their combination accounts for the observed advantage. The authors also call for more research on listening proficiency development in VI learners and on how learners themselves use strategies to understand enhanced aural input.</p></div>
-</section>
-
-<section class="slide" data-title="Implications for teachers">
-<div class="kicker">14 · Implications for university English teachers</div><h2>What might teachers take into practice?</h2>
-<div class="grid">
- <div class="card"><h3>Make key words noticeable</h3><p>Use deliberate aural cues when introducing target vocabulary in listening activities.</p></div>
- <div class="card"><h3>Use L1 strategically</h3><p>Where appropriate, use concise L1 explanations to support L1–L2 meaning connections.</p></div>
- <div class="card"><h3>Build listening proficiency</h3><p>Do not assume auditory access automatically means high L2 listening proficiency.</p></div>
- <div class="card"><h3>Plan for retention</h3><p>Revisit words in meaningful contexts and include interactive, productive use after initial explanation.</p></div>
-</div>
-<div class="callout"><p><strong>Practical caution:</strong> These are teaching implications informed by the article, not a tested university-level intervention. Adapt them to learners’ needs and evaluate their effects locally.</p></div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Make a clear distinction between the study and your professional recommendations. The study involved Saudi female high-school learners at low–intermediate proficiency. University teachers can consider adapting the principles, but should not assume identical effects for adult university learners, different proficiency levels or other languages. Also, increased volume should be used carefully and accessibly; the article tested increased volume as a cue, not excessively loud sound.</p></div>
-</section>
-
-<section class="slide" data-title="Discussion prompt">
-<div class="kicker">15 · Discussion</div><h2>Questions for our teaching context</h2>
-<div class="card">
-<h3>Think–pair–share</h3>
-<ol>
-<li>How do we currently draw learners’ attention to important vocabulary in listening tasks?</li>
-<li>When can L1 explanations support learning, and when might they create over-reliance on translation?</li>
-<li>How can we provide repeated, meaningful and productive encounters with target words?</li>
-<li>How might these approaches be adapted for VI learners in inclusive university classes?</li>
-</ol>
-</div>
-<div class="note"><h3>Speaker notes · 2 minutes</h3><p>Invite colleagues to discuss one or two questions. Encourage them to connect the findings to their own courses, while remembering the study’s population and limitations. For VI learners, ask whether spoken cues, accessible documents, screen-reader compatibility and opportunities for oral practice are built into the activity from the beginning.</p></div>
-</section>
-
-<section class="slide" data-title="Conclusion">
-<div class="kicker">16 · Conclusion</div><h2>The central message</h2>
-<div class="callout"><p><strong>AIMCS—enhanced volume followed by an L1 explanation—improved short-term vocabulary learning compared with CS alone for both VI and sighted learners in this study.</strong></p></div>
-<ul>
-<li>VI learners showed greater overall short-term gains than SI learners.</li>
-<li>Listening proficiency was particularly important for VI learners.</li>
-<li>The AIMCS advantage did not persist at the two-week delayed post-test.</li>
-<li>Longer-term retention may require further contextualized encounters and productive language use.</li>
-</ul>
-<p class="subtitle">The wider contribution: evidence for an aural, inclusive approach to vocabulary instruction—while recognizing that more research is needed.</p>
-<div class="note"><h3>Speaker notes · 1 minute</h3><p>Close by returning to the title: “bridging barriers” means designing instruction that makes language input accessible and noticeable, while supporting meaning. The strongest message is not that one technique solves every challenge, but that carefully designed aural input and strategic L1 support can improve short-term vocabulary learning, especially for VI learners, and should be followed by work that supports durable learning.</p></div>
-</section>
-
-<section class="slide" data-title="Reference">
-<div class="kicker">Reference</div><h2>Article discussed</h2>
-<p class="subtitle">Badri, A., Graham, S., &amp; Zhang, P. (2026). Bridging barriers: Aural cues, codeswitching, and proficiency in vocabulary learning for visually impaired learners.</p>
-<p><em>Studies in Second Language Acquisition, 48</em>, 118–139.</p>
-<p>https://doi.org/10.1017/S0272263125101101</p>
-<div class="callout"><p>Open-access article published by Cambridge University Press.</p></div>
-<p class="refs">Key theoretical sources discussed in the article include Jiang (2000) on L2 vocabulary acquisition; Schmidt (2012) on noticing; Sharwood Smith (1993) on input enhancement; VanPatten (1996) on input processing; and Craik and Lockhart (1972) on depth of processing.</p>
-<div class="note"><h3>Speaker notes · 30 seconds</h3><p>Thank the audience and invite final questions. The reference on this slide is the article used as the basis for the presentation. The theoretical works listed are cited in the article; consult the original paper’s reference list for full bibliographic details.</p></div>
-</section>
-
-</main>
-<footer>
-<button id="prev" aria-label="Previous slide">← Previous</button>
-<span id="counter" aria-live="polite">1 / 17</span>
-<div id="progress" aria-label="Presentation progress"><div id="bar"></div></div>
-<button id="notes" aria-pressed="false">Show notes</button>
-<button id="print" title="Print or save as PDF">Print</button>
-<button class="primary" id="next" aria-label="Next slide">Next →</button>
-</footer>
-</div>
-<script>
-const slides=[...document.querySelectorAll('.slide')];
-let index=0,notesVisible=false;
-const counter=document.getElementById('counter'),bar=document.getElementById('bar');
-const prev=document.getElementById('prev'),next=document.getElementById('next'),notesBtn=document.getElementById('notes');
-function show(i){
- index=Math.max(0,Math.min(slides.length-1,i));
- slides.forEach((s,n)=>s.classList.toggle('active',n===index));
- counter.textContent=(index+1)+' / '+slides.length;
- bar.style.width=((index+1)/slides.length*100)+'%';
- prev.disabled=index===0;next.disabled=index===slides.length-1;
- document.title=slides[index].dataset.title+' — Bridging Barriers';
- const note=slides[index].querySelector('.note');
- if(note)note.classList.toggle('show',notesVisible);
-}
-function toggleNotes(){
- notesVisible=!notesVisible;notesBtn.textContent=notesVisible?'Hide notes':'Show notes';
- notesBtn.setAttribute('aria-pressed',String(notesVisible));show(index);
-}
-prev.addEventListener('click',()=>show(index-1));
-next.addEventListener('click',()=>show(index+1));
-notesBtn.addEventListener('click',toggleNotes);
-document.getElementById('print').addEventListener('click',()=>window.print());
-document.addEventListener('keydown',e=>{
- if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(index+1)}
- else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(index-1)}
- else if(e.key.toLowerCase()==='n'){toggleNotes()}
- else if(e.key==='Home'){show(0)}
- else if(e.key==='End'){show(slides.length-1)}
-});
-show(0);
-</script>
+    <footer class="controls" aria-label="Presentation controls">
+      <button class="nav-button" id="previous-button" type="button" aria-label="Previous slide">← <span>Previous</span></button>
+      <div class="progress-group">
+        <span class="slide-count" id="slide-count" aria-live="polite">— / —</span>
+        <div class="progress-track" role="progressbar" id="progress-track" aria-label="Presentation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="progress-fill" id="progress-fill"></span>
+        </div>
+      </div>
+      <button class="nav-button" id="notes-button" type="button" aria-pressed="false">Presenter notes</button>
+      <button class="nav-button print-button" id="print-button" type="button" title="Print or save as PDF">Print</button>
+      <button class="nav-button next-button" id="next-button" type="button" aria-label="Next slide"><span>Next</span> →</button>
+    </footer>
+    <div class="keyboard-hint" aria-hidden="true">Navigate with ← → · Press N for notes · F for fullscreen</div>
+  </div>
+  <noscript>This presentation needs JavaScript enabled to load the editable session data.</noscript>
 </body>
 </html>
